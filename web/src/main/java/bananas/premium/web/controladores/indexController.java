@@ -11,7 +11,10 @@ public class indexController {
     
     @GetMapping({"/", "/index", "/inicio", "home"})
     public String index(Model model){
+       // model.addAttribute("texto", "asldkfjakld");
         return "/compras/index";
     }
+
+
 
 }

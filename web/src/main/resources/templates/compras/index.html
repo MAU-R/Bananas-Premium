@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html xmlns:th="http://www.thymelead.org">
+    <head>
+        <title>Prueba aca</title>
+        <meta charset="UTF-8"/>
+        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
+    </head>
+    <body>
+        <h1 class="yo">..::COn variables en la ruta:::..</h1>
+        ssu nmbre bish <h1 th:text="${texto}"></h1>
+        <img th:src="@{/img/2d.PNG}" alt="alt"/>
+    </body>
 </html>
