@@ -15,6 +15,10 @@ public class indexController {
         return "/compras/index";
     }
 
-
+    @GetMapping("/login")
+    public String login(Model model){
+       // model.addAttribute("texto", "asldkfjakld");
+        return "/compras/login";
+    }
 
 }
