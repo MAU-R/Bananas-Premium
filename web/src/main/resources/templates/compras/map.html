@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <header th:insert="/commons/fragments :: head"></header>
+    <body>
+        <div>
+            <img class = "jmap" th:src="@{/img/map.png}" alt="alt"/>
+            <h2 class = "mb-3">Where to Find Us!</h2>
+            <h2 class = "mb-3">Our Info</h2>
+            <img style = "margin-left: 500px" class = "mb-5" th:src="@{/img/map2.png}" alt="alt"/>
+        </div>
+    </body>
+    <footer th:insert="/commons/fragments :: foot"></footer>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
+    </head>
+    <body style="background-image: url('/img/smthg.jpg');">
+        <img class = "imgg" th:src="@{/img/ra.png}" alt="alt"/>
+      <a  th:href="@{/inicio/}" ><button type="submit" class="yo">Go Back</button></a>  
+        <div class = "main">
+            <div class="login">
+                <h1>Login</h1>
+                    <input type="text" placeholder="Username" required="required" />
+                    <input type="password" placeholder="Password" required="required" />
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Log In</button>
+            </div>
+        </div>
+    </body>
+</html>

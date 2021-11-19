@@ -20,5 +20,14 @@ public class indexController {
        // model.addAttribute("texto", "asldkfjakld");
         return "/compras/login";
     }
-
+    @GetMapping("/map")
+    public String map(Model model){
+       // model.addAttribute("texto", "asldkfjakld");
+        return "/compras/map";
+    }
+    @GetMapping("/fragments")
+    public String fragments(Model model){
+       // model.addAttribute("texto", "asldkfjakld");
+        return "/compras/fragments";
+    }
 }
