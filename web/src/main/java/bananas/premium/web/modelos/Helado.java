@@ -10,6 +10,8 @@ public class Helado {
     private double precio;
     private int existencia;
     private String imagen;
+    private String nombre;
+
 
     public int getId() {
         return id;
@@ -50,5 +52,16 @@ public class Helado {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    public Helado(){
+        
+    }
     
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre(){
+        return nombre;
+    }
 }

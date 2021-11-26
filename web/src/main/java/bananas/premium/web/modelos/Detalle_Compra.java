@@ -59,5 +59,9 @@ public class Detalle_Compra {
     public void setCanridad(int canridad) {
         this.canridad = canridad;
     }
+
+    public Detalle_Compra(){
+
+    }
     
 }

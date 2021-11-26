@@ -33,4 +33,7 @@ public class Detalle_Sucursal {
         this.id_sucursal = id_sucursal;
     }
     
+    public Detalle_Sucursal(){
+        
+    }
 }

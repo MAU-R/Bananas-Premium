@@ -42,4 +42,8 @@ public class Sucursal {
     public void setImagen(String param){
         this.imagen=param;
     }
+
+    public Sucursal(){
+
+    }
 }
