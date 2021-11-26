@@ -35,10 +35,10 @@ h5{
     width: 35px;
     height: 35px;
     cursor: pointer;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 0;
     opacity:0.85;
     filter: grayscale(100%)
@@ -137,9 +137,9 @@ footer {
     background: #ff5ecf;
     background: -webkit-linear-gradient(to right, #ff5ecf, #3aade2);
     background: linear-gradient(to right, #ff5ecf, #3aade2);
-    min-height: 250px;
+    min-height: 200px;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 footer a{
