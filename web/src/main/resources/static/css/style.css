@@ -31,20 +31,6 @@ h5{
     margin-left: 70px;
 }
 
-.imgs{
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0;
-    opacity:0.85;
-    filter: grayscale(100%)
-}
-
-
 .btn-large {
     cursor: pointer;
     border-radius: 5em;
@@ -140,6 +126,19 @@ footer {
     min-height: 200px;
     text-align: center;
     padding-top: 20px;
+}
+
+.imgs{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    opacity:0.85;
+    filter: grayscale(100%)
 }
 
 footer a{

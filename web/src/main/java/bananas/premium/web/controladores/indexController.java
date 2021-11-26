@@ -30,4 +30,9 @@ public class indexController {
        // model.addAttribute("texto", "asldkfjakld");
         return "/compras/fragments";
     }
+    @GetMapping("/shop")
+    public String shop(Model model){
+       // model.addAttribute("texto", "asldkfjakld");
+        return "/compras/shop";
+    }
 }
