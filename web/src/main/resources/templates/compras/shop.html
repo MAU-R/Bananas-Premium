@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Login</title>
-        <meta charset="UTF-8"/>
-        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      </head>
-      <header th:insert="/commons/fragments :: head"></header>
-    <body>
-        
-    </body>
-    <footer th:insert="/commons/fragments :: foot"></footer>
+        <head>
+            <title>Shop</title>
+            <meta charset="UTF-8"/>
+            <link rel="icon" th:href="@{/img/ic.png}">
+            <link rel ="stylesheet" th:href="@{/css/justincase.css}"/>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <header th:insert="/commons/fragments :: head"></header>
+        <body>
+            <main>
+            <h1 style="font-size: 65px; text-align:center; font-weight: bold;">Flavors</h1>
+            <hr>
+            <hr>
+            <ul class="tilesWrap">
+                <li>
+                    <img class="pic" th:src="@{/img/ic.png}" alt="alt"/>
+                    <h2>Strawberry</h2>
+                    <h3><i>$4.99</i></h3>
+                    <p>
+                        Some random text that will
+                    </p>
+                    <button>Add To Cart</button>
+                </li>
+                <li>
+                    <img class="pic" th:src="@{/img/ic.png}" style="filter: sepia(100%);" alt="alt"/>
+                    <h2>Vanilla</h2>
+                    <h3><i>$4.99</i></h3>
+                    <p>
+                        Make you crave each flavor
+                    </p>
+                    <button>Add To Cart</button>
+                </li>
+                <li>
+                    <img class="pic" th:src="@{/img/ic.png}" style="filter: invert();" alt="alt"/>
+                    <h2>Mint?</h2>
+                    <h3><i>$4.99</i></h3>
+                    <p>
+                        That you see here until
+                    </p>
+                    <button>Add To Cart</button>
+                </li>
+                <li>
+                    <img class="pic" th:src="@{/img/ic.png}" style="filter: grayscale();" alt="alt"/>
+                    <h2>Oreo</h2>
+                    <h3><i>$4.99</i></h3>
+                    <p>
+                        You check your bank account
+                    </p>
+                    <button>Add To Cart</button>
+                </li>
+            </ul>
+            <a  th:href="@{/inicio/home/}" ><button type="submit" class="btn-primary btn-large btn-rtrn">Return Home</button></a>
+            <a  th:href="@{/inicio/cart/}" ><button type="submit" class="btn-primary btn-large btn-chck">Cart</button></a>
+        </main>
+        </body>
+        <footer th:insert="/commons/fragments :: foot"></footer>
 </html>

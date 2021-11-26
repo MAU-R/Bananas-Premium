@@ -3,7 +3,8 @@
     <head>
         <title>Login</title>
         <meta charset="UTF-8"/>
-        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/index.css}"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       </head>
    <header th:insert="/commons/fragments :: head"></header>
@@ -16,7 +17,7 @@
             <br>
             <p class="font-italic mb-0" style="color: rgb(70, 70, 70); font-size: 18px">Some tasty treats for everyone to enjoy at a nice picnic outside!</p>
             <p class="font-italic" style="color: rgb(70, 70, 70); font-size: 18px">A carousel might go here, we will check that later</p>
-            <a href="#" role="button" class="btn btn-primary" style = "color:rgb(241, 241, 241); border: 0; background: linear-gradient(to right, #cb5eec, #56cada);">Peruse Our Variety!</a>
+            <a th:href="@{/inicio/shop}" role="button" class="btn btn-primary" style = "color:rgb(241, 241, 241); border: 0; background: linear-gradient(to right, #cb5eec, #56cada);">Peruse Our Variety!</a>
             <br>
         </div>
     </div>

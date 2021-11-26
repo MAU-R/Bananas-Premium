@@ -35,4 +35,9 @@ public class indexController {
        // model.addAttribute("texto", "asldkfjakld");
         return "/compras/shop";
     }
+    @GetMapping("/cart")
+    public String cart(Model model){
+       // model.addAttribute("texto", "asldkfjakld");
+        return "/compras/cart";
+    }
 }
