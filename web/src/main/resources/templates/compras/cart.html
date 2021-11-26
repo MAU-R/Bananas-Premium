@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Shop</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/anotha1.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <header th:insert="/commons/fragments :: head"></header>
+      <body>
+        <h1 style="font-size: 65px; text-align:center; margin-top: 85px; font-weight: bold;">Cart</h1>
+        <main>
+            <div class="row">
+                <div class="col col-flavor col1">Ice Cream</div>
+                <div class="col col-quant col1">Quantity</div>
+                <div class="col col-price col1">Price</div>
+                <div class="col col-total col1">Total</div>
+            </div>
+            <div class="row">
+                <div class="col col-flavor"><img class="imgg" th:src="@{/img/ic.png}" alt="alt"/>Strawberry</div>
+                <div class="col col-quant">2</div>
+                <div class="col col-price">$4.99</div>
+                <div class="col col-total">$9.98</div>
+            </div>
+            <div class="row">
+                <div class="col col-flavor"><img class="imgg" style="filter: sepia(100%);" th:src="@{/img/ic.png}" alt="alt"/>Strawberry</div>
+                <div class="col col-quant">1</div>
+                <div class="col col-price">$3.99</div>
+                <div class="col col-total">$3.99</div>
+            </div>
+        </main>
+        <div>
+            <a  th:href="@{/inicio/shop/}" ><button type="submit" class="btn-primary btn-large btn-rtrn">Flavors</button></a>
+            <a><button type="submit" class="btn-primary btn-large btn-chck">Checkout</button></a>
+        </div>
+      </body>
+    <footer th:insert="/commons/fragments :: foot"></footer>
+</html>

@@ -1,0 +1,71 @@
+.bg-cover {
+    background-size: cover !important;
+}
+
+.navbar{
+    background-color: rgb(22, 157, 219);
+}
+
+ul{
+    position: absolute;
+    right: 0;
+    padding-right: 50px;
+}
+
+li{
+    font-weight: bold
+}
+
+.container h1{
+    font-family: 'Brush Script MT';
+    color: rgb(255, 66, 224);
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.navbar-brand{
+    font: italic;
+    font-weight: bold;
+    font-family: 'Brush Script MT';
+    font-size: 50px;
+}
+
+footer {
+    background: #ff5ecf;
+    background: -webkit-linear-gradient(to right, #ff5ecf, #3aade2);
+    background: linear-gradient(to right, #ff5ecf, #3aade2);
+    min-height: 200px;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.imgs{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    opacity:0.85;
+    filter: grayscale(100%)
+}
+
+footer a{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center; 
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer p{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center; 
+    font-size: 17px;
+    margin-top: 20px;
+    color: white;
+}
