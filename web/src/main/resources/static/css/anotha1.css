@@ -1,0 +1,71 @@
+main{
+    background-color: #00000021;
+    width: 1100px;
+    height: 300px;
+    margin: 5em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.329);
+    position: relative;
+}
+
+.col{
+    padding: 1em;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.col-flavor{
+    text-align: left;
+    text-indent: 50px;
+}
+
+.col1{
+    background-color: rgb(255, 115, 208);
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h1{
+    color: rgb(255, 94, 255);
+    font-family: 'Brush Script MT';
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.btn-large{
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-rtrn{
+    position: absolute;
+    left: 150px;
+    transform: translateY(-450px);
+    background: linear-gradient(to left, #ba52ff, #ff52e8);
+}
+.btn-chck{
+    position: absolute;
+    right: 150px;
+    transform: translateY(-450px);
+    background: linear-gradient(to right, #7852ff, #0bc5dd);
+}
+
+.imgg{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}

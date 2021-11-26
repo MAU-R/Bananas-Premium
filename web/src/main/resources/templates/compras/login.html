@@ -3,17 +3,18 @@
     <head>
         <title>Login</title>
         <meta charset="UTF-8"/>
-        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/index.css}"/>
     </head>
     <body style="background-image: url('/img/smthg.jpg');">
-        <img class = "imgg" th:src="@{/img/ra.png}" alt="alt"/>
-      <a  th:href="@{/inicio/}" ><button type="submit" class="yo">Go Back</button></a>  
+      <a  th:href="@{/inicio/}" ><button type="submit" class="btn-large" style = "margin-left: 1200px; margin-top: 10px;">Go Back</button></a>  
         <div class = "main">
             <div class="login">
                 <h1>Login</h1>
                     <input type="text" placeholder="Username" required="required" />
                     <input type="password" placeholder="Password" required="required" />
-                    <button type="submit" class="btn btn-primary btn-block btn-large">Log In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-large" style = "margin-top: 40px;
+                    transform: translateX(80%);">Log In</button>
             </div>
         </div>
     </body>

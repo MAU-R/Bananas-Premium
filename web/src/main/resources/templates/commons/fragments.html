@@ -3,7 +3,7 @@
     <head>
         <title>Login</title>
         <meta charset="UTF-8"/>
-        <link rel ="stylesheet" th:href="@{/css/style.css}"/>
+        <link rel ="stylesheet" th:href="@{/css/fragments.css}"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       </head>
 <body>
@@ -29,23 +29,23 @@
     <div th:fragment="head">
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-          <a class="navbar-brand" style="color: rgb(226, 219, 121); font-size: 27px">Bananas Premium</a>
+          <a class="navbar-brand" style="color: rgb(255, 170, 241); font-size: 27px; cursor: default">Bananas Premium</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a th:href="@{/inicio/}" class="nav-link" href="#" style="color: rgb(223, 223, 223)">Home</a>
+                <a th:href="@{/inicio/}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Home</a>
               </li>
               <li class="nav-item">
-                <a th:href="@{/inicio/}" class="nav-link" href="#" style="color: rgb(223, 223, 223)">Ice Creams</a>
+                <a th:href="@{/inicio/shop}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Ice Creams</a>
               </li>
               <li class="nav-item">
-                <a th:href="@{/inicio/map}" class="nav-link" href="#" style="color: rgb(223, 223, 223)">Locations</a>
+                <a th:href="@{/inicio/map}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Locations</a>
               </li>
               <li class="nav-item">
-                <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(255, 245, 152)">Log In</a>
+                <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(255, 167, 240)">Log In</a>
               </li>
             </ul>
           </div>

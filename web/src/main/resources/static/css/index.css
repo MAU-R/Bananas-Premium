@@ -1,0 +1,95 @@
+.yo{
+    background: transparent;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    text-align: center;
+    font-family: 'Brush Script MT';
+    color: #33beff;
+    font-weight: bold;
+}
+
+.imgg{
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.imgindex{
+    width: 350px;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.btn-large {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #ff52e8, #0bc5dd);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    font-weight: bold;
+}
+
+.main {
+    background-color: #ffffff15;
+    width: 800px;
+    height: 350px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    position: relative;
+    transform: translateY(-10%);
+}
+
+.login { 
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    margin: -150px 0 0 -150px;
+    width:300px;
+    height:300px;
+}
+.login h1 { 
+    color: rgb(42, 173, 206);
+    font-family: 'Brush Script MT';
+    font-size: 40px;
+    text-shadow: 0 0 10px rgba(255, 95, 228, 0.397); 
+    text-align:center; }
+
+input { 
+    width: 100%; 
+    margin-bottom: 10px; 
+    background: rgba(138, 138, 138, 0.3);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(54, 103, 209, 0.3);
+    border: 1px solid rgba(13, 91, 97, 0.445);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(231, 83, 206, 0.6), 0 1px 1px rgba(250, 181, 238, 0.6)
+}
+
+iframe{
+    margin-top: 65px;
+}
+
