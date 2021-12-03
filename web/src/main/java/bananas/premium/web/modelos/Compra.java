@@ -9,7 +9,6 @@ import java.util.Date;
 public class Compra {
     private int id;
     private Date fecha;
-    private double monto;
     private double total;
 
     public int getId() {

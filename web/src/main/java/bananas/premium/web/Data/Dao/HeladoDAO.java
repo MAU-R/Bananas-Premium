@@ -21,6 +21,7 @@ public class HeladoDAO extends Conexion{
             usu.setPrecio(rs.getDouble("precio"));
             usu.setExistencia(rs.getInt("existencia"));
             return usu;
+            
         }
     }
 
