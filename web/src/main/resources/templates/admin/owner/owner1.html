@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/admin.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+        <div class="row">
+            <div class="col-lg-2 col-f2">
+                <h1>Welcome, User12</h1>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/owner2}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/owner1}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/owner3}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Log Out</a>
+                    </li>
+                </ul>
+                <h2>Bananas Premium</h2>
+            </div>
+            <div class = "col-lg-9 col-s">
+                <h3>Management</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-title-3">Employees</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-title-3" style="font-size: 16px;">Name</div>
+                        <div class="col col-title-3" style="font-size: 16px;">Manager</div>
+                        <div class="col col-title-3" style="font-size: 16px;">Edit Data</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Charlie Puth</div>
+                        <div class="col col-i">Sam Stevens</div>
+                        <div class="col col-i"><a th:href="@{/inicio/ownereditemp/}"><button>Edit</button></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Natalie Ray</div>
+                        <div class="col col-i">John Black</div>
+                        <div class="col col-i"><a th:href="@{/inicio/ownereditemp/}"><button>Edit</button></a></div>
+                    </div>
+                </div>
+                <a th:href="@{/inicio/ownereditemp/}"><button style="margin-top: 30px; left: 50px;
+                 position: relative;">Add</button></a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-title-4">Managers</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-title-4" style="font-size: 16px;">Name</div>
+                        <div class="col col-title-4" style="font-size: 16px;">Location</div>
+                        <div class="col col-title-4" style="font-size: 16px;">Edit Data</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Sam Stevens</div>
+                        <div class="col col-i">Leon, GTO</div>
+                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">John Black</div>
+                        <div class="col col-i">Dallas, TX</div>
+                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Steve Harvey Pog</div>
+                        <div class="col col-i">NYC, NY</div>
+                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Barack JoeMama</div>
+                        <div class="col col-i">Vancouver, BC</div>
+                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                    </div>
+                </div>
+                <a th:href="@{/inicio/ownereditadmin/}"><button style="margin-top: 30px; position: relative;
+                    left: 50px;">Add</button></a>
+            </div>
+        </div>
+    </body>

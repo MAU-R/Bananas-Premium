@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/admin.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+        <div class="row">
+            <div class="col-lg-2 col-f2">
+                <h1>Welcome, User12</h1>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/owner2}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/owner1}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/owner3}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Log Out</a>
+                    </li>
+                </ul>
+                <h2>Bananas Premium</h2>
+            </div>
+            <div class = "col-lg-9 col-s">
+                <h3>Home</h3>
+                <img style="left: 20%; position: absolute;" class= "imgindex" th:src="@{/img/ep.png}" alt="alt"/>
+            </div>
+        </div>
+    </body>
