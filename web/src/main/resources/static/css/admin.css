@@ -1,0 +1,213 @@
+main{
+    background-color: rgba(255, 255, 255, 0.129);
+    width: 100%;
+    min-height: 450px;
+    margin-bottom: 40px;
+    padding-top: 55px;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.329);
+    position: relative;
+    
+}
+
+.col-f{
+    padding: 2em;
+    margin-right: 50px;
+    text-align: center;
+    background: linear-gradient(to top, #ff3434, #ffd478);
+    box-shadow: 0px 11px 20px 11px rgba(0, 0, 0, 0.308);
+    min-height: 630px;
+}
+
+.col-f2{
+    padding: 2em;
+    margin-right: 50px;
+    text-align: center;
+    background: linear-gradient(to top, #723eff, #71bbff);
+    box-shadow: 0px 11px 20px 11px rgba(0, 0, 0, 0.308);
+    min-height: 630px;
+}
+
+h1{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.col-s{
+    padding: 3em;
+}
+
+.nav-item{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+h2{
+    padding-top: 60px;
+}
+
+.container{
+    background-color: #00000021;
+    margin-top: 20px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.329);
+    position: relative;
+}
+
+.col-title-1{
+    background-color: #fded92;
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.col-title-2{
+    background-color: #a7ff91;
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.col-title-3{
+    background-color: #fd92e6;
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.col-title-4{
+    background-color: #92f0fd;
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.col{
+    text-align: center;
+}
+
+.col-i{
+    padding: 5px;
+    font-size: 16px;
+}
+
+.row button{
+    background: transparent;
+	border: 1px solid #202020;
+	padding: 5px 20px;
+	color: #949494;
+	border-radius: 3px;
+	cursor: pointer;
+	overflow: hidden;
+    font-weight: bold;
+}
+.row button:hover {
+	color: #dd7373;
+    background: transparent;
+    border: 1px solid #202020;
+}
+
+.omfg button{
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.in-d{
+    margin: 1em;
+    margin-left: 5em;
+    text-align: left;
+}
+
+.btn-can{
+    position: absolute;
+    left: 30%;
+}
+
+.btn-con{
+    position: absolute;
+    right: 30%;
+}
+
+.imgs{
+    width: 20%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+ul {list-style-type: none;}
+
+
+/* Month header */
+.month {
+  padding: 30px 25px;
+  width: 100%;
+  background: linear-gradient(to top, #245049, #0b1815);
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #000000;
+  color: white !important
+}
+.days li .mp {
+    color: rgb(192, 192, 192);
+  }
+
+
+.img-loc{
+    height: auto;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+}
+
