@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/admin.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+        <div class="row">
+            <div class="col-lg-2 col-f">
+                <h1>Welcome, User12</h1>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/admin2}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/admin1}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/stats}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(221, 31, 6)">Log Out</a>
+                    </li>
+                </ul>
+                <h2>Bananas Premium</h2>
+            </div>
+            <div class = "col-lg-9 col-s">
+                <h3>Management</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-title-1">Employees</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-title-1" style="font-size: 16px;">Name</div>
+                        <div class="col col-title-1" style="font-size: 16px;">Manager</div>
+                        <div class="col col-title-1" style="font-size: 16px;">Edit Data</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Charlie Puth</div>
+                        <div class="col col-i">Charlie Puth</div>
+                        <div class="col col-i"><a th:href="@{/inicio/admineditemp/}"><button>Edit</button></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Natalie Ray</div>
+                        <div class="col col-i">Charlie Puth</div>
+                        <div class="col col-i"><a th:href="@{/inicio/admineditemp/}"><button>Edit</button></a></div>
+                    </div>
+                </div>
+                <a th:href="@{/inicio/admineditemp/}"><button style="margin-top: 30px; left: 50px;
+                 position: relative;">Add</button></a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-title-2">Ice Creams</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Mint</div>
+                        <div class="col col-i"><a th:href="@{/inicio/admineditic/}"><button>Edit</button></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Vanilla</div>
+                        <div class="col col-i"><a th:href="@{/inicio/admineditic/}"><button>Edit</button></a></div>
+                    </div>
+                </div>
+                <a th:href="@{/inicio/admineditic/}"><button style="margin-top: 30px; position: relative;
+                    left: 50px;">Add</button></a>
+            </div>
+        </div>
+    </body>
