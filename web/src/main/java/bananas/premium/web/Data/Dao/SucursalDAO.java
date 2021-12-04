@@ -7,9 +7,12 @@ import java.util.List;
 import org.springframework.jdbc.core.RowMapper;
 
 import bananas.premium.web.Data.db.Conexion;
+import bananas.premium.web.Data.repository.SucursalRepository;
 import bananas.premium.web.modelos.Sucursal;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-public class SucursalDAO extends Conexion{
+public class SucursalDAO  extends Conexion implements SucursalRepository{
 
     class mapSucursal implements RowMapper<Sucursal>{
         @Override
