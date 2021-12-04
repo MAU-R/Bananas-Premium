@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class adminController {
     @GetMapping("/-1")
     public String getAdmin1(){
-        return "admin/usuario/admin1";
+        return "admin/manager/admin1";
     }
     @GetMapping("/-2")
     public String getAdmin2(){
-        return "admin/usuario/admin2";
+        return "admin/manager/admin2";
     }
     @GetMapping("/edit/emplooye")
     public String geteditemp(){
-        return "admin/usuario/admineditemp";
+        return "admin/manager/admineditemp";
     }
     @GetMapping("/edit/ice")
     public String geteditemps(){
-        return "admin/usuario/admineditic";
+        return "admin/manager/admineditic";
     }
     @GetMapping("/stats")
     public String getStats(){
-        return "admin/stats";
+        return "manager/stats";
     }
 }
