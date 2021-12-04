@@ -10,7 +10,7 @@ public class Compra {
     private int id;
     private Date fecha;
     private double total;
-
+   
     public int getId() {
         return id;
     }
@@ -25,14 +25,6 @@ public class Compra {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-
-    public double getMonto() {
-        return monto;
-    }
-
-    public void setMonto(double monto) {
-        this.monto = monto;
     }
 
     public double getTotal() {
