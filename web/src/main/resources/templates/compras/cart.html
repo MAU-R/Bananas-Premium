@@ -21,8 +21,8 @@
             
             <div th:if="${helados}" >
                 <div class="row" th:each="producto : ${helados}">
-                <div><img class="imgg" th:src="${producto.helado.imagen}" alt="alt"/></div>  
-                <div class="col col-flavor" th:text="${producto.helado.sabor}"></div>
+                
+                <div class="col col-flavor"><img class="imgg" th:src="${producto.helado.imagen}" alt="alt"/><p th:text="${producto.helado.sabor}"></p></div>
                 <div class="col col-quant" th:text="${producto.cantidad}"></div>
                 <div class="col col-price" th:text="'$ '+ ${producto.helado.precio}"></div>
                 <div class="col col-total" th:text="${producto.helado.precio * producto.cantidad}"></div>

@@ -18,6 +18,9 @@ main{
     text-align: left;
     text-indent: 50px;
     margin-left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .col1{
