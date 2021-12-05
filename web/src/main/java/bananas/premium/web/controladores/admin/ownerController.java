@@ -1,5 +1,9 @@
 package bananas.premium.web.controladores.admin;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +34,13 @@ public class ownerController {
     @GetMapping("/edit/ice")
     public String geteditempso(){
         return "admin/owner/ownereditloc";
+    }
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest req){
+        HttpSession sesion = req.getSession();
+        sesion.setAttribute("usuarioLog", null);
+        return "compras/index";
+
     }
     
 }

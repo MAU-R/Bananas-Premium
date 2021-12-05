@@ -11,10 +11,12 @@
         <div class = "main">
             <div class="login">
                 <h1>Login</h1>
-                    <input type="text" placeholder="Username" required="required" />
-                    <input type="password" placeholder="Password" required="required" />
+                    <form th:action="@{/inicio/login}" th:object="${usuario}" method="post"> 
+                    <input type="text" placeholder="Username" required="required" th:field="*{nombre}"/>
+                    <input type="password" placeholder="Password" required="required" th:field="*{contraseña}" />
                     <button type="submit" class="btn btn-primary btn-block btn-large" style = "margin-top: 40px;
                     transform: translateX(80%);">Log In</button>
+                    </form>
             </div>
         </div>
     </body>

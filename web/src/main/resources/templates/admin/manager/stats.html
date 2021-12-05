@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/admin.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+        <div class="row">
+            <div class="col-lg-2 col-f">
+                <h1>Welcome, User12</h1>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/admin2}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/admin1}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/stats}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(221, 31, 6)">Log Out</a>
+                    </li>
+                </ul>
+                <h2>Bananas Premium</h2>
+            </div>
+            <div class = "col-lg-9 col-s">
+                <h3>Statistics</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-title-1">Purchases</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-title-1" style="font-size: 16px;">Employee</div>
+                        <div class="col col-title-1" style="font-size: 16px;">Date</div>
+                        <div class="col col-title-1" style="font-size: 16px;">Total</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Charlie Puth</div>
+                        <div class="col col-i">12/1/2021</div>
+                        <div class="col col-i">39.92</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-i">Charlie Puth</div>
+                        <div class="col col-i">11/24/2021</div>
+                        <div class="col col-i">34.93</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
