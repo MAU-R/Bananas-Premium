@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 
 import bananas.premium.web.Data.repository.HeladoRepository;
 import bananas.premium.web.modelos.Helado;
+import bananas.premium.web.modelos.cantidad;
 
 @Controller
 @RequestMapping("/inicio")
@@ -51,11 +52,11 @@ public class indexController {
     public String shop(Model model, HttpServletRequest req){
         HttpSession session= req.getSession();
         try{
-            List<Helado> heladosSesion = (List<Helado>)session.getAttribute("helados");
+            List<cantidad> heladosSesion = (List<cantidad>)session.getAttribute("helados");
             session.setAttribute("helados", heladosSesion);
             System.out.println("guardar helados");
-            for (Helado helado : heladosSesion) {
-                System.out.println(helado.getNombre());
+            for (cantidad helado : heladosSesion) {
+                System.out.println(helado.helado.getNombre());
             }
         }catch(Exception e){
             System.out.println(e);
@@ -71,16 +72,20 @@ public class indexController {
     public String shopAdd(Model model, @PathVariable int id, HttpServletRequest req){
         HttpSession sesion= req.getSession();
         try{
-            List<Helado> heladosSesion = (List<Helado>)sesion.getAttribute("helados");
-            sesion.setAttribute("helados", heladosSesion);
+            List<cantidad> heladosSesion = (List<cantidad>)sesion.getAttribute("helados");
             System.out.println("Obtener helados");
-            for (Helado helado : heladosSesion) {
-                System.out.println(helado.getNombre());
+            
+            for (cantidad helado : heladosSesion) {
+                if(helado.helado.getId()==id){
+                    System.out.println("Helado Aumentado");
+                    helado.cantidad++;
+                    sesion.setAttribute("helados", heladosSesion);
+                    return shop(model, req);
+                }
             }
-            heladosSesion.add(heladoRepository.getbyId(id));
-            System.out.println("wuauuaua aheladoso");
+            heladosSesion.add(new cantidad(1, heladoRepository.getbyId(id)));
+            
             System.out.println("Heladoguardado");
-           
            sesion.setAttribute("helados", heladosSesion);
         }catch(Exception e){
             System.out.println(e);
@@ -94,11 +99,16 @@ public class indexController {
 
     }
     @GetMapping("/cart")
-    public String cart(Model model ,@SessionAttribute(name = "helados") List<Helado> heladosSesion){
-       System.out.println("wuauuaua aheladoso");
-      for (Helado helado : heladosSesion) {
-        System.out.println(helado.getNombre());
-      }
+    public String cart(Model model ,HttpServletRequest req){
+        HttpSession sesion= req.getSession();
+        try{
+            List<cantidad> heladosSesion = (List<cantidad>)sesion.getAttribute("helados");
+            System.out.println("Obtener helados");
+            model.addAttribute("helados", heladosSesion);
+        }catch(Exception e){
+            System.out.println(e);
+            System.out.println("Sin helados al parecer");
+        }
         return "/compras/cart";
     }
 }

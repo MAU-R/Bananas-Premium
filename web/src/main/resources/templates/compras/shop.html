@@ -21,7 +21,7 @@
                     <p th:text="${helado.nombre}">
                         
                     </p>
-                    <button ><a th:href="@{/inicio/shop/add/(id=1)}">add to cart</a></button>
+                    <button ><a th:href="@{'/inicio/shop/add/'+${helado.id}}">add to cart</a></button>
             </ul>
             <a  th:href="@{/inicio/home/}" ><button type="submit" class="btn-primary btn-large btn-rtrn">Return Home</button></a>
             <a  th:href="@{/inicio/cart/}" ><button type="submit" class="btn-primary btn-large btn-chck">Cart</button></a>

@@ -12,27 +12,27 @@
         <h1 style="font-size: 65px; text-align:center; margin-top: 85px; font-weight: bold;">Cart</h1>
         <main>
             <div class="row">
-                <div class="col col-flavor col1">Ice Cream</div>
-                <div class="col col-quant col1">Quantity</div>
-                <div class="col col-price col1">Price</div>
-                <div class="col col-total col1">Total</div>
+                    <div class="col col-flavor col1">Ice Cream</div>
+                    <div class="col col-quant col1">Quantity</div>
+                    <div class="col col-price col1">Price</div>
+                    <div class="col col-total col1">Total</div>
+           </div>
+            
+            
+            <div th:if="${helados}" >
+                <div class="row" th:each="producto : ${helados}">
+                <div><img class="imgg" th:src="${producto.helado.imagen}" alt="alt"/></div>  
+                <div class="col col-flavor" th:text="${producto.helado.sabor}"></div>
+                <div class="col col-quant" th:text="${producto.cantidad}"></div>
+                <div class="col col-price" th:text="'$ '+ ${producto.helado.precio}"></div>
+                <div class="col col-total" th:text="${producto.helado.precio * producto.cantidad}"></div>
             </div>
-            <div class="row">
-                <div class="col col-flavor"><img class="imgg" th:src="@{/img/ic.png}" alt="alt"/>Strawberry</div>
-                <div class="col col-quant">2</div>
-                <div class="col col-price">$4.99</div>
-                <div class="col col-total">$9.98</div>
-            </div>
-            <div class="row">
-                <div class="col col-flavor"><img class="imgg" style="filter: sepia(100%);" th:src="@{/img/ic.png}" alt="alt"/>Strawberry</div>
-                <div class="col col-quant">1</div>
-                <div class="col col-price">$3.99</div>
-                <div class="col col-total">$3.99</div>
-            </div>
+        </div>
+         
         </main>
         <div>
             <a  th:href="@{/inicio/shop/}" ><button type="submit" class="btn-primary btn-large btn-rtrn">Flavors</button></a>
-            <a><button type="submit" class="btn-primary btn-large btn-chck">Checkout</button></a>
+            <a th:href="@{/inicio/compra}"><button type="submit" class="btn-primary btn-large btn-chck" >Checkout</button></a>
         </div>
       </body>
     <footer th:insert="/commons/fragments :: foot"></footer>
