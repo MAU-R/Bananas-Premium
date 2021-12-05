@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
 import bananas.premium.web.Data.repository.HeladoRepository;
 import bananas.premium.web.Data.repository.UsuarioRepository;
 import bananas.premium.web.modelos.Helado;
@@ -22,6 +24,7 @@ import bananas.premium.web.modelos.cantidad;
 
 @Controller
 @RequestMapping("/inicio")
+
 public class indexController {
     
     @Autowired
@@ -48,12 +51,12 @@ public class indexController {
         }
         try{ if(usuarioSesion!=null){
             if(usuarioSesion.getRol().equals("admin"))
-            return "/admin/manager/admin1";
+            return "redirect:/admin/-1";
             if(usuarioSesion.getRol().equals("owner")){
-                return "admin/owner/owner1";
+                return "redirect:/owner/-1";
             }
             else{
-                return "admin/manager/admin1";
+                return "redirect:/admin/-1";
             }
         }
        }catch(Exception e){

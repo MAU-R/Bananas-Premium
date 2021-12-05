@@ -10,24 +10,9 @@
       <body>
         <div class="row">
             <div class="col-lg-2 col-f2">
-                <h1>Welcome, User12</h1>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a th:href="@{/owner/-2}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a th:href="@{/owner/-1}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a th:href="@{/owner/-3}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Locations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a th:href="@{/owner/logout}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Log Out</a>
-                    </li>
-                    <li class="nav-item">
-                        <a th:href="@{/inicio/}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Home</a>
-                    </li>
-                </ul>
+                <h1 th:text="'Welcome, ' + ${usuario.nombre}"></h1>
+                <div th:insert="/commons/adminFragments :: sidebar-owner">
+                </div>
                 <h2>Bananas Premium</h2>
             </div>
             <div class = "col-lg-9 col-s">

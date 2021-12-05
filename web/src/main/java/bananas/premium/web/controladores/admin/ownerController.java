@@ -6,11 +6,28 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
+
+import bananas.premium.web.modelos.Usuario;
 
 @Controller
 @RequestMapping("/owner")
+@SessionAttributes("usuarioLog")
 public class ownerController {
+    @ModelAttribute("usuario")
+    public Usuario usuario(@ModelAttribute("usuarioLog") Usuario usuariolog){
+        try{
+            Usuario usuario = usuariolog;
+            System.out.println(usuario.getNombre());
+            return usuario;
+        }catch(Exception e){
+            System.out.println(e);
+            return null;
+        }
+    }
     @GetMapping("/-1")
     public String getOwner1(){
         return "admin/owner/owner1";
@@ -36,9 +53,10 @@ public class ownerController {
         return "admin/owner/ownereditloc";
     }
     @GetMapping("/logout")
-    public String logout(HttpServletRequest req){
+    public String logout(HttpServletRequest req ,SessionStatus status){
         HttpSession sesion = req.getSession();
         sesion.setAttribute("usuarioLog", null);
+        status.setComplete();
         return "compras/index";
 
     }
