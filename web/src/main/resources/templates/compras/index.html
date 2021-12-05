@@ -16,25 +16,46 @@
             <br>
             <br>
             <p class="font-italic mb-0" style="color: rgb(70, 70, 70); font-size: 18px">Some tasty treats for everyone to enjoy at a nice picnic outside!</p>
-            <p class="font-italic" style="color: rgb(70, 70, 70); font-size: 18px">A carousel might go here, we will check that later</p>
+            <p class="font-italic" style="color: rgb(70, 70, 70); font-size: 18px">Or weild it as a secret weapon against gremlins? Who knows!</p>
             <a th:href="@{/inicio/shop}" role="button" class="btn btn-primary" style = "color:rgb(241, 241, 241); border: 0; background: linear-gradient(to right, #cb5eec, #56cada);">Peruse Our Variety!</a>
             <br>
         </div>
     </div>
-    
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mb-4">
-                <h5 class="font-weight-bold py-4" style="font-size: 40px;">Text About Company And Flavors</h2>
+                <h5 class="font-weight-bold py-4" style="font-size: 40px;">More banana, More delicious, Most premium</h2>
                 <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
                 <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
                 <br>
                 <p class="font-italic text-muted mb-3">Lorem ipsum dolor sit amet, consectetur <strong class="font-weight-bold text-dark">adipisicing elit, sed </strong>do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <strong class="font-weight-bold text-dark">reprehenderit in voluptate </strong>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div class = "col-lg-4">
-                <img class= "imgindex" th:src="@{/img/ic.png}" alt="alt"/>
+                <img class= "imgindex" th:src="@{/img/banana-split.png}" alt="alt"/>
             </div>
         </div>
     </div>
+    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-4.79,67.61 C347.90,207.73 244.64,-17.25 533.01,97.22 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(66, 35, 0);"></path></svg></div>
+            
+        <div class="cont-br">
+            <p style="text-align: center;">
+                Try Our New Flavor!
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h4>We welcome the new addition of our most anticipated flavor yet! The 
+                            Chocolate Sundae! With exquisite all-natural cocoa and low-fat sugars,
+                            this is the perfect dessert for you and your whole family! Diabetic-friendly!
+                        </h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class= "imgpr" th:src="@{/img/sundae.png}" alt="alt"/>
+                        <h3 style="text-align: center;">Chocolate Sundae</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; padding: 0; margin: 0;"><path d="M-4.22,89.31 C149.99,150.00 261.57,-45.86 503.67,103.13 L503.10,-17.25 L-4.22,-6.39 Z" style="stroke: none; fill: rgb(66, 35, 0);"></path></svg></div>
   <footer th:insert="/commons/fragments :: foot"></footer>
 </html>

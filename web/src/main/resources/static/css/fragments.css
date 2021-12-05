@@ -45,13 +45,12 @@ footer {
     width: 35px;
     height: 35px;
     cursor: pointer;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 0;
     opacity:0.85;
-    filter: grayscale(100%)
 }
 
 footer a{

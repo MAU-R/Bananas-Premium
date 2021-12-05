@@ -9,23 +9,23 @@
         </head>
         <header th:insert="/commons/fragments :: head"></header>
         <body>
-            <main>
-            <h1 style="font-size: 65px; text-align:center; font-weight: bold;">Flavors</h1>
-            <hr>
-            <hr>
-            <ul class="tilesWrap">
-                <li th:each="helado : ${helados}">
-                    <img class="pic" th:src="${helado.imagen}" alt="alt"/>
-                    <h2 th:text="${helado.sabor}"></h2>
-                    <h3><i th:text="${helado.precio}"></i></h3>
-                    <p th:text="${helado.nombre}">
-                        
-                    </p>
-                    <button ><a th:href="@{'/inicio/shop/add/'+${helado.id}}">add to cart</a></button>
-            </ul>
-            <a  th:href="@{/inicio/home/}" ><button type="submit" class="btn-primary btn-large btn-rtrn">Return Home</button></a>
-            <a  th:href="@{/inicio/cart/}" ><button type="submit" class="btn-primary btn-large btn-chck">Cart</button></a>
-        </main>
+            <h1 style="font-size: 65px; text-align:center; margin-top: 85px; font-weight: bold;">Ice Creams</h1>
+            <hr STYLE="background-color:#bebebe; height:3px; width:90%">
+            <div class="container">
+                <ul class="tilesWrap">
+                    <li th:each="helado : ${helados}">
+                        <img class="pic" th:src="${helado.imagen}" alt="alt"/>
+                        <h2 th:text="${helado.sabor}"></h2>
+                        <h3><i th:text="${helado.precio}"></i></h3>
+                        <p th:text="${helado.nombre}">
+                            
+                        </p>
+                        <button ><a th:href="@{'/inicio/shop/add/'+${helado.id}}">add to cart</a></button>
+                    </li>
+                    <a class="butt1" th:href="@{/inicio/home/}" ><button>Return Home</button></a>
+                    <a class="butt2" th:href="@{/inicio/cart/}" ><button>Cart</button></a>
+                    <footer th:insert="/commons/fragments :: foot"></footer>
+                </ul>
+            </div>
         </body>
-        <footer th:insert="/commons/fragments :: foot"></footer>
 </html>

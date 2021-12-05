@@ -133,6 +133,7 @@ public class indexController {
         }catch(Exception e){
             System.out.println(e);
             sesion.setAttribute("helados", new ArrayList<>());
+            return "redirect:inicio/shop/add/"+id;
           //  System.out.println("guardar arraylist");
         }
        

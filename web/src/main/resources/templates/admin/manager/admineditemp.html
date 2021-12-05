@@ -18,16 +18,18 @@
             <div class = "col-lg-9 col-s">
                 <main class="omfg">
                     <h3 style="text-align: center;">Employee Info</h3>
+                    <form th:object="${employee}" th:action="@{'/admin/edit/employee/'+*{id}}" method="post"> 
                     <div class="row">
                         <div class="col-lg-2">
                             
-                            <div><input class="in-d" type="text" placeholder="Name" required="required" style="width: 420px;"/></div>
-                            <div><input class="in-d" type="text" placeholder="Manager" required="required" style="width: 420px;"/></div>
-                            <div><input class="in-d" type="number" placeholder="Wage" required="required" style="width: 120px;" /></div>
+                            <div><label class="in-d" for="name">Name</label><input class="in-d" type="text" th:if="employee != null" th:field="*{nombre}" required="required" style="width: 420px;"/></div>
+                            <div><label class="in-d" for="name">Password</label><input class="in-d" type="text" th:field="*{contraseña}" required="required" style="width: 420px;"/></div>
+                            
                         </div>
                     </div>
-                    <a th:href="@{/inicio/admin1/}" class="btn-can"><button>Cancel</button></a>
+                    <a th:href="@{/admin/-1/}" class="btn-can "><button>Cancel</button></a>
                     <button class="btn-con">Confirm</button>
+                </form>
                 </main>
             </div>
         </div>

@@ -89,6 +89,58 @@ input {
     box-shadow: inset 0 -5px 45px rgba(231, 83, 206, 0.6), 0 1px 1px rgba(250, 181, 238, 0.6)
 }
 
-iframe{
-    margin-top: 65px;
+.cont-br{
+    min-height: 280px;
+    background-color: rgb(66, 35, 0);
+    padding: 0;
+    margin: 0;
+}
+
+.cont-br p{
+    font-size: 27px;
+    font-weight: bold;
+    color: rgb(255, 194, 133);
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+}
+
+.cont-br h4{
+    margin-top: 70px;
+    font-size: 22px;
+    color: rgb(255, 238, 221);
+    font-weight: lighter;
+}
+
+.cont-br h3{
+    font-size: 35px;
+    color: rgb(161, 74, 23);
+    font-family: 'Brush Script MT';
+}
+
+.imgpr{
+    width: auto;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin: auto;
+}
+
+.cont-map {
+    width: 100%;
+    text-align: center;
+}
+
+.col-map h2{
+    font-family: 'Brush Script MT';
+    font-size: 35px;
+    color: rgb(43, 57, 184);
+}
+.col-map h3{
+    font-size: 25px;
+    color: rgb(54, 54, 54);
+    font-weight: lighter;
+    padding-bottom: 65px;
 }

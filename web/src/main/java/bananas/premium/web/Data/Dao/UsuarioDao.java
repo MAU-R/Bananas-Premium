@@ -53,4 +53,12 @@ public class UsuarioDao extends Conexion implements UsuarioRepository{
             return null;
         }
     }
+    public Usuario getById(int id){
+        try{
+            return jdbcTemplate.queryForObject("select * from usuario WHERE id=? ",new mapUsuario(), id);
+        }catch(IncorrectResultSizeDataAccessException e){
+            System.out.println(e);
+            return null;
+        }
+    }
 }

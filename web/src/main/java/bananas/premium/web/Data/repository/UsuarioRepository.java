@@ -10,4 +10,5 @@ public interface UsuarioRepository {
     public int insert(Usuario usuario);
     public int actualizar(Usuario usuario);
     public Usuario getByInicio(Usuario usuario);
+    public Usuario getById(int id);
 }
