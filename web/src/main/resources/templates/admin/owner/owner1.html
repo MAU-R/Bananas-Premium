@@ -13,16 +13,19 @@
                 <h1>Welcome, User12</h1>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a th:href="@{/inicio/owner2}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Home</a>
+                        <a th:href="@{/owner/-2}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a th:href="@{/inicio/owner1}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Management</a>
+                        <a th:href="@{/owner/-1}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Management</a>
                     </li>
                     <li class="nav-item">
-                        <a th:href="@{/inicio/owner3}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Locations</a>
+                        <a th:href="@{/owner/-3}" class="nav-link" href="#" style="color: rgb(216, 216, 216)">Locations</a>
                     </li>
                     <li class="nav-item">
-                        <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Log Out</a>
+                        <a th:href="@{/owner/logout}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Log Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/}" class="nav-link" href="#" style="color: rgb(67, 14, 136)">Home</a>
                     </li>
                 </ul>
                 <h2>Bananas Premium</h2>
@@ -41,15 +44,15 @@
                     <div class="row">
                         <div class="col col-i">Charlie Puth</div>
                         <div class="col col-i">Sam Stevens</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditemp/}"><button>Edit</button></a></div>
+                        <div class="col col-i"><a th:href="@{/owner/edit/employee/}"><button>Edit</button></a></div>
                     </div>
                     <div class="row">
                         <div class="col col-i">Natalie Ray</div>
                         <div class="col col-i">John Black</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditemp/}"><button>Edit</button></a></div>
+                        <div class="col col-i"><a th:href="@{/owner/edit/employee}"><button>Edit</button></a></div>
                     </div>
                 </div>
-                <a th:href="@{/inicio/ownereditemp/}"><button style="margin-top: 30px; left: 50px;
+                <a th:href="@{/owner/edit/admin}"><button style="margin-top: 30px; left: 50px;
                  position: relative;">Add</button></a>
                 <div class="container">
                     <div class="row">
@@ -63,17 +66,17 @@
                     <div class="row">
                         <div class="col col-i">Sam Stevens</div>
                         <div class="col col-i">Leon, GTO</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                        <div class="col col-i"><a th:href="@{/owner/edit/admin}"><button>Edit</button></a></div>
                     </div>
                     <div class="row">
                         <div class="col col-i">John Black</div>
                         <div class="col col-i">Dallas, TX</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                        <div class="col col-i"><a th:href="@{/owner/edit/admin}"><button>Edit</button></a></div>
                     </div>
                     <div class="row">
                         <div class="col col-i">Steve Harvey Pog</div>
                         <div class="col col-i">NYC, NY</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
+                        <div class="col col-i"><a th:href="@{/owner/ownereditadmin/}"><button>Edit</button></a></div>
                     </div>
                     <div class="row">
                         <div class="col col-i">Barack JoeMama</div>

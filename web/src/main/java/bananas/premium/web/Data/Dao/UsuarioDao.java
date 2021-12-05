@@ -3,14 +3,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import bananas.premium.web.Data.db.Conexion;
 import bananas.premium.web.Data.repository.UsuarioRepository;
 import bananas.premium.web.modelos.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-
+@Repository
+@Component
+@Primary
 public class UsuarioDao extends Conexion implements UsuarioRepository{
 
     class mapUsuario implements RowMapper<Usuario>{
@@ -38,5 +44,13 @@ public class UsuarioDao extends Conexion implements UsuarioRepository{
     }
     public int actualizar(Usuario usuario){
         return jdbcTemplate.update("update usuario set nombre=?,  contraseña=?,  rol = ? where id LIKE ?", usuario.getNombre(),usuario.getContraseña(),usuario.getRol(),usuario.getId());
+    }
+    public Usuario getByInicio(Usuario usuario){
+        try{
+            return jdbcTemplate.queryForObject("select * from usuario WHERE nombre=? AND contraseña=? ",new mapUsuario(), usuario.getNombre(), usuario.getContraseña());
+        }catch(IncorrectResultSizeDataAccessException e){
+            System.out.println(e);
+            return null;
+        }
     }
 }

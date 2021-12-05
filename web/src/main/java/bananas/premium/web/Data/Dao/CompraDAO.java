@@ -7,13 +7,18 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import bananas.premium.web.Data.db.Conexion;
 import bananas.premium.web.Data.repository.CompraRepository;
 import bananas.premium.web.modelos.Compra;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
-
+@Repository
+@Component
+@Primary
 public class CompraDAO extends Conexion implements CompraRepository{
 
     class mapCompra implements RowMapper<Compra>{
