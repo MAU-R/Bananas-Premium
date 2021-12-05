@@ -25,55 +25,15 @@
                         <div class="col col-title-3" style="font-size: 16px;">Flavor</div>
                         <div class="col col-title-3" style="font-size: 16px;">Edit Data</div>
                     </div>
-                    <div class="row">
-                        <div class="col col-i">Mint</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditic/}"><button>Edit</button></a></div>
+                    <div class="row" th:each="helado : ${helados}">
+                        <div class="col col-i" th:text="${helado.sabor}">Mint</div>
+                        <div class="col col-i"><a th:href="@{'/owner/edit/ice/'+${helado.id}}"><button>Edit</button></a></div>
                     </div>
-                    <div class="row">
-                        <div class="col col-i">Vanilla</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditic/}"><button>Edit</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i">Strawberry</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditic/}"><button>Edit</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i">Oreo</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditic/}"><button>Edit</button></a></div>
-                    </div>
+                    
                 </div>
-                <a th:href="@{/inicio/ownereditic/}"><button style="margin-top: 30px; position: relative;
+                <a th:href="@{/owner/add/ice}"><button style="margin-top: 30px; position: relative;
                     left: 50px;">Add</button></a>
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-title-4">Managers</div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-title-4" style="font-size: 16px;">Name</div>
-                        <div class="col col-title-4" style="font-size: 16px;">Location</div>
-                        <div class="col col-title-4" style="font-size: 16px;">Edit Data</div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i">Sam Stevens</div>
-                        <div class="col col-i">Leon, GTO</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i">John Black</div>
-                        <div class="col col-i">Dallas, TX</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i">Steve Harvey Pog</div>
-                        <div class="col col-i">NYC, NY</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i">Barack JoeMama</div>
-                        <div class="col col-i">Vancouver, BC</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditadmin/}"><button>Edit</button></a></div>
-                    </div>
-                </div>
+              
                 <a th:href="@{/inicio/ownereditadmin/}"><button style="margin-top: 30px; position: relative;
                     left: 50px;">Add</button></a>
             </div>

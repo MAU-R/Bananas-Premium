@@ -28,20 +28,14 @@
                         <div class="col col-title-3" style="font-size: 16px;">Edit Data</div>
                         
                     </div>
-                    <div class="row">
-                        <div class="col col-i"><img class="img-loc" th:src="@{/img/ic.png}" alt="alt"/></div>
-                        <div class="col col-i">Your Butt</div>
-                        <div class="col col-i">NYC, NY</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditloc/}"><button>Edit</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-i"><img class="img-loc" th:src="@{/img/ic.png}" alt="alt"/></div>
-                        <div class="col col-i">Rain or Shine</div>
-                        <div class="col col-i">Vancouver, B.C.</div>
-                        <div class="col col-i"><a th:href="@{/inicio/ownereditloc/}"><button>Edit</button></a></div>
+                    <div class="row" th:each="sucursal : ${sucursales}">
+                        <div class="col col-i"><img class="img-loc" th:src="${sucursal.imagen}" alt="alt"/></div>
+                        <div class="col col-i" th:text="${sucursal.nombre}">Your Butt</div>
+                        <div class="col col-i" th:text="${sucursal.ubicacion}">NYC, NY</div>
+                        <div class="col col-i"><a th:href="@{'/owner/edit/sucursal/'+${sucursal.id}}"><button>Edit</button></a></div>
                     </div>
                 </div>
-                <a th:href="@{/inicio/ownereditloc/}"><button style="margin-top: 30px; left: 50px;
+                <a th:href="@{/owner/add/sucursal}"><button style="margin-top: 30px; left: 50px;
                  position: relative;">Add</button></a>
             </div>
         </div>

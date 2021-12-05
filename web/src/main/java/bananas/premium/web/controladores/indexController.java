@@ -13,11 +13,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import bananas.premium.web.Data.repository.CompraRepository;
 import bananas.premium.web.Data.repository.HeladoRepository;
 import bananas.premium.web.Data.repository.UsuarioRepository;
+import bananas.premium.web.Data.repository.detalleCompraRepository;
+import bananas.premium.web.modelos.Detalle_Compra;
+import bananas.premium.web.modelos.Detalle_Sucursal;
 import bananas.premium.web.modelos.Helado;
 import bananas.premium.web.modelos.Usuario;
 import bananas.premium.web.modelos.cantidad;
@@ -26,11 +32,16 @@ import bananas.premium.web.modelos.cantidad;
 @RequestMapping("/inicio")
 
 public class indexController {
-    
+    private double total;
     @Autowired
     HeladoRepository heladoRepository;
     @Autowired
     UsuarioRepository usuarioRepository;
+    @Autowired
+    CompraRepository compraRepository;
+    @Autowired
+    detalleCompraRepository detalleRepository;
+
     @GetMapping({"/", "/index", "/inicio", "home"})
     public String index(Model model){
        // model.addAttribute("texto", "asldkfjakld");
@@ -122,18 +133,21 @@ public class indexController {
                 if(helado.helado.getId()==id){
                   //  System.out.println("Helado Aumentado");
                     helado.cantidad++;
+                    total=total+helado.helado.getPrecio();
                     sesion.setAttribute("helados", heladosSesion);
                     return shop(model, req);
                 }
             }
-            heladosSesion.add(new cantidad(1, heladoRepository.getbyId(id)));
-            
+            Helado helado = heladoRepository.getbyId(id);
+            heladosSesion.add(new cantidad(1, helado));
+            total=total+helado.getPrecio();
+            System.out.print(total);
          //   System.out.println("Heladoguardado");
            sesion.setAttribute("helados", heladosSesion);
         }catch(Exception e){
             System.out.println(e);
             sesion.setAttribute("helados", new ArrayList<>());
-            return "redirect:inicio/shop/add/"+id;
+            return "redirect:/inicio/shop/add/"+id;
           //  System.out.println("guardar arraylist");
         }
        
@@ -142,6 +156,37 @@ public class indexController {
     public void addAttribute(){
 
     }
+    @PostMapping("/check")
+    public String checkout(Model model, HttpSession sesion, @RequestParam(name="loc") int id_loc){
+        System.out.println("aqui esta el numero?");
+        System.out.print(id_loc);
+        try{
+            List<cantidad> heladosSesion = (List<cantidad>)sesion.getAttribute("helados");
+          //  System.out.println("Obtener helados");
+          compraRepository.insert(total);
+          int compra_id=compraRepository.getLast();
+          System.out.println("aqui esta el numero de compra?");
+        System.out.print(compra_id);
+          Detalle_Compra detalle = new Detalle_Compra();
+          
+          for (cantidad cantidad : heladosSesion) {
+              detalle.setCanridad(cantidad.cantidad);
+              detalle.setId_compra(compra_id);
+              detalle.setId_sucursal(id_loc);
+              detalle.setId_helado(cantidad.helado.getId());
+              detalleRepository.insert(detalle);
+          }
+          
+            sesion.setAttribute("helados", null);
+        }catch(Exception e){
+            System.out.println(e);
+            System.out.println("Sin helados al parecer");
+        }
+        
+
+        return "redirect:/inicio/shop";
+    }
+
     @GetMapping("/cart")
     public String cart(Model model ,HttpServletRequest req){
         HttpSession sesion= req.getSession();

@@ -17,8 +17,8 @@
             </div>
             <div class = "col-lg-9 col-s">
                 <main class="omfg">
-                    <h3 style="text-align: center;">Employee Info</h3>
-                    <form th:object="${employee}" th:action="@{'/admin/edit/employee/'+*{id}}" method="post"> 
+                    <h3 style="text-align: center;">ADD Employee</h3>
+                    <form th:object="${employee}" th:action="@{/admin/add/employee}" method="post"> 
                     <div class="row">
                         <div class="col-lg-2">
                             
@@ -30,7 +30,6 @@
                     <button class="btn-con">Confirm</button>
                 </form>
                 <a th:href="@{/admin/-1/}" class="btn-can "><button>Cancel</button></a>
-                <a th:href="@{'/admin/delete/'+${employee.id}}" class="btn-ca "><button>Delete</button></a>
                 </main>
             </div>
         </div>

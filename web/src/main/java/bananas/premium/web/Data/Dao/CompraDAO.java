@@ -20,7 +20,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @Component
 @Primary
 public class CompraDAO extends Conexion implements CompraRepository{
-
+    class intMap implements RowMapper<Integer>{
+        @Override
+        public Integer mapRow(ResultSet rs, int rowNum)throws SQLException{
+            int x= rs.getInt("id");
+            return x;
+        }
+    }
     class mapCompra implements RowMapper<Compra>{
         @Override
         public Compra mapRow(ResultSet rs, int rowNum) throws SQLException{
@@ -41,10 +47,13 @@ public class CompraDAO extends Conexion implements CompraRepository{
         return jdbcTemplate.update("delete from Compra where id=?", id);
     }
  
-    public int insert(Compra Compra){
-        return jdbcTemplate.update("insert into Compra(fecha,total)values(?,?)", Compra.getFecha(),Compra.getTotal());
+    public int insert(double total){
+        return jdbcTemplate.update("insert into Compra(monto_total)values(?)",total);
     }
     public int actualizar(Compra Compra){
         return jdbcTemplate.update("update Compra set fecha=?,  total=? where id LIKE ?", Compra.getFecha(),Compra.getTotal());
     }
+    public int getLast(){
+        return jdbcTemplate.queryForObject("select max(id) id from compra", new intMap());
+ }
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" th:href="@{/img/ic.png}">
+        <link rel ="stylesheet" th:href="@{/css/admin.css}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+        <div class="row">
+            <div class="col-lg-2 col-e">
+                <h1>Welcome, User12</h1>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/employee1}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/employee2}" class="nav-link" href="#" style="color: rgb(236, 236, 236)">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/inicio/login}" class="nav-link" href="#" style="color: rgb(48, 77, 58)">Log Out</a>
+                    </li>
+                </ul>
+                <h2>Bananas Premium</h2>
+            </div>
+            <div class = "col-lg-9 col-fi">
+                <h3>Home</h3>
+                <div class="pyro">
+                    <div class="before"></div>
+                    <div class="after"></div>
+                </div>
+                <img style="left: 30%; position: absolute;" class= "imgpotate" th:src="@{/img/potato.png}" alt="alt"/>
+                <h4>Momma Didn't Make No Lil Bi ~Gandhi </h4>
+            </div>
+        </div>
+    </body>

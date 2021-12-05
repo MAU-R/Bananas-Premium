@@ -9,4 +9,6 @@ public interface SucursalRepository {
     public int delete(int id);
     public int insert(Sucursal Sucursal);
     public int actualizar(Sucursal Sucursal);
+    public Sucursal getById(int id);
+    public int getLast();
 }

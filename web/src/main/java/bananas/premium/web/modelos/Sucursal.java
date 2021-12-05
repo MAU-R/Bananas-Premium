@@ -9,7 +9,7 @@ public class Sucursal {
     private String nombre;
     private String ubicacion;
     private String imagen;
-    
+    public boolean baja;
     public int getId(){
         return this.id;
     }

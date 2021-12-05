@@ -27,13 +27,23 @@ public class SucursalDAO  extends Conexion implements SucursalRepository{
             usu.setNombre(rs.getString("nombre"));
             usu.setUbicacion(rs.getString("ubicacion"));
             usu.setImagen(rs.getString("imagen"));
+            usu.baja=rs.getBoolean("baja");
             return usu;
             
         }
     }
-
+    class intMap implements RowMapper<Integer>{
+        @Override
+        public Integer mapRow(ResultSet rs, int rowNum)throws SQLException{
+            int x= rs.getInt("id");
+            return x;
+        }
+    }
+    public int getLast(){
+        return jdbcTemplate.queryForObject("select max(id) id from sucursal", new intMap());
+ }
     public List<Sucursal> getAll(){
-        return jdbcTemplate.query("select * from Sucursal", new mapSucursal());
+        return jdbcTemplate.query("select * from Sucursal where baja=0", new mapSucursal());
     }
 
     public int delete(int id){
@@ -44,6 +54,9 @@ public class SucursalDAO  extends Conexion implements SucursalRepository{
         return jdbcTemplate.update("insert into Sucursal(nombre,ubicacion,imagen)values(?,?,?)", Sucursal.getNombre(),Sucursal.getUbicacion(),Sucursal.getImagen());
     }
     public int actualizar(Sucursal Sucursal){
-        return jdbcTemplate.update("update Sucursal set nombre=?,  ubicacion=? where id LIKE ?", Sucursal.getNombre(),Sucursal.getUbicacion(),Sucursal.getImagen(),Sucursal.getId());
+        return jdbcTemplate.update("update Sucursal set nombre=?,  ubicacion=?, imagen=?, baja=? where id LIKE ?", Sucursal.getNombre(),Sucursal.getUbicacion(),Sucursal.getImagen(),Sucursal.baja,Sucursal.getId());
+    }
+    public Sucursal getById(int id){
+        return jdbcTemplate.queryForObject("select * from sucursal where id=?", new mapSucursal(), id);
     }
 }

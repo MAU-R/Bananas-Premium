@@ -8,6 +8,7 @@ public interface CompraRepository {
     
     public List<Compra> getAll();
     public int delete(int id);
-    public int insert(Compra Compra);
+    public int insert(double total);
     public int actualizar(Compra Compra);
+    public int getLast();
 }

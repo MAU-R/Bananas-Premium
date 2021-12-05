@@ -20,7 +20,7 @@
                     <h3 style="text-align: center;">Location Info</h3>
                     <div class="row">
                         <div class="col-lg-2">
-                            <form th:object="${sucursal}" method="post" th:action="@{'/owner/edit/sucursal/'+${sucursal.id}}">
+                            <form th:object="${sucursal}" method="post" th:action="@{'/owner/add/sucursal/'}">
                             <div><label for="ubicacion">Manager</label><input class="in-d" type="text" th:field="*{ubicacion}" required="required" style="width: 420px;"/></div>
                             <div><label for="imagen">Url</label><input class="in-d" type="text" th:field="*{imagen}" required="required" style="width: 420px;"/></div>
                             <div><label for="nombre">nombre</label><input class="in-d" type="text" th:field="*{nombre}" required="required" style="width: 420px;"/></div>
@@ -31,7 +31,7 @@
                     
                     <button class="btn-con">Confirm</button></form>
                     <a th:href="@{/owner/-3}" class="btn-can"><button>Cancel</button></a>
-                    <a th:href="@{'/owner/delete/sucursal/'+${sucursal.id}}" class="btn-ca"><button>Delete</button></a>
+                    
                 </main>
             </div>
         </div>

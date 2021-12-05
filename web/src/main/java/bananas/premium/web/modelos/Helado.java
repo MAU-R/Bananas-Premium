@@ -11,7 +11,7 @@ public class Helado {
     private int existencia;
     private String imagen;
     private String nombre;
-
+    public boolean baja;
 
     public int getId() {
         return id;

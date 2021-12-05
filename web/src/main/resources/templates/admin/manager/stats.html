@@ -22,20 +22,16 @@
                         <div class="col col-title-1">Purchases</div>
                     </div>
                     <div class="row">
-                        <div class="col col-title-1" style="font-size: 16px;">Employee</div>
+                        <div class="col col-title-1" style="font-size: 16px;">Ice cream</div>
                         <div class="col col-title-1" style="font-size: 16px;">Date</div>
                         <div class="col col-title-1" style="font-size: 16px;">Total</div>
                     </div>
-                    <div class="row">
-                        <div class="col col-i">Charlie Puth</div>
-                        <div class="col col-i">12/1/2021</div>
-                        <div class="col col-i">39.92</div>
+                    <div class="row" th:each="detalle : ${detalles}">
+                        <div class="col col-i" th:text="${detalle.sabor}">Charlie Puth</div>
+                        <div class="col col-i" th:text="${detalle.fecha}">12/1/2021</div>
+                        <div class="col col-i" th:text="${detalle.total}">39.92</div>
                     </div>
-                    <div class="row">
-                        <div class="col col-i">Charlie Puth</div>
-                        <div class="col col-i">11/24/2021</div>
-                        <div class="col col-i">34.93</div>
-                    </div>
+
                 </div>
             </div>
         </div>

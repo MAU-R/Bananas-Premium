@@ -18,21 +18,24 @@
             <div class = "col-lg-9 col-s">
 
                 <main class="omfg">
-                    <h3 style="text-align: center;">Ice Cream Info</h3>
+                    <h3 style="text-align: center;">Add Ice Cream</h3>
                     <div class="row">
-                        <form th:action="@{'/owner/edit/ice/'+${helado.id}}" method="post" th:object="${helado}">
-                        <div class="col-lg-2">
-                            <div><input class="in-d" type="text" th:field="*{sabor}" required="required" style="width: 420px;"/></div>
-                            <div><input class="in-d" type="number" th:field="*{existencia}" required="required" style="width: 120px;" /></div>
-                            <div><input class="in-d" type="text" th:field="*{precio}" required="required" style="width: 190px;"/></div>
+                        <form th:action="@{'/owner/add/ice/'}" method="post" th:object="${helado}">
+                        <div class="col-lg-1">
+                            
+                            <div><label for="sabor">sabor</label><input class="in-d" type="text" th:field="*{sabor}" required="required" style="width: 420px;"/></div>
+                            <div><label for="existencia">existencia</label><input class="in-d" type="number" th:field="*{existencia}" required="required" style="width: 120px;" /></div>
+                            <div><label for="precio">precio</label><input class="in-d" type="text" th:field="*{precio}" required="required" style="width: 190px;"/></div>
+                            <div><label for="imagen">url </label><input class="in-d" type="text" th:field="*{imagen}" required="required" style="width: 190px;"/></div>
+                            <div><label for="nombre">nombre</label><input class="in-d" type="text" th:field="*{nombre}" required="required" style="width: 190px;"/></div>
                         </div>
-                    
+                        
                         
                     </div>
                     <button class="btn-con">Confirm</button>
                 </form>
+               
                 <a th:href="@{/owner/-1}" class="btn-can"><button>Cancel</button></a>
-                <a th:href="@{'/owner/delete/ice/'+${helado.id}}" class="btn-del"><button>Delete</button></a>
                 </main>
             </div>
         </div>

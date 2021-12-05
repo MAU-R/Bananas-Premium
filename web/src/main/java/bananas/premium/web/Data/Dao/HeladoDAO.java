@@ -29,13 +29,14 @@ public class HeladoDAO  extends Conexion implements HeladoRepository{
             usu.setImagen(rs.getString("imagen"));
             usu.setPrecio(rs.getDouble("precio"));
             usu.setExistencia(rs.getInt("existencia"));
+            usu.baja=rs.getBoolean("baja");
             return usu;
             
         }
     }
     @Override
     public List<Helado> getAll(){
-        return jdbcTemplate.query("select * from Helado", new mapHelado());
+        return jdbcTemplate.query("select * from Helado where baja=0", new mapHelado());
     }
     @Override
     public Helado getbyId(int id){
@@ -51,6 +52,6 @@ public class HeladoDAO  extends Conexion implements HeladoRepository{
     }
     @Override
     public int actualizar(Helado Helado){
-        return jdbcTemplate.update("update Helado set nombre=?,  sabor=?,  imagen = ?, precio=?, existencia=? where id LIKE ?", Helado.getNombre(),Helado.getSabor(),Helado.getImagen(),Helado.getPrecio(),Helado.getExistencia(),Helado.getId());
+        return jdbcTemplate.update("update Helado set nombre=?,  sabor=?,  imagen = ?, precio=?, existencia=?, baja=? where id LIKE ?", Helado.getNombre(),Helado.getSabor(),Helado.getImagen(),Helado.getPrecio(),Helado.getExistencia(),Helado.baja,Helado.getId());
     }
 }

@@ -13,20 +13,23 @@
         <hr STYLE="background-color:#bebebe; height:3px; width:90%">
         <div id="wrapper">
             <a class="btnc" th:href="@{/inicio/shop/}" ><button class="btn-rtrn">Flavors</button></a>
+            <form th:action="@{/inicio/check}" method="post">
             <p>Select a Location: </p>
             <select name="loc" id="selectLoc">
                 <optgroup label="Canada">
-                    <option value="Vancouver, B.C.">Vancouver, B.C.</option>
+                    <option value="2">Vancouver, B.C.</option>
                 </optgroup>
                 <optgroup label="Mexico">
-                    <option value="Leon, GTO">Leon, GTO</option>
+                    <option value="1">Leon, GTO</option>
                 </optgroup>
                 <optgroup label="USA">
-                    <option value="Dallas, TX">Dallas, TX</option>
+                    <option value="3">Dallas, TX</option>
                 </optgroup>
             </select>
             <a class="btnc"><button class="btn-chck">Checkout</button></a>
+        </form>
         </div>
+       
         <hr STYLE="background-color:#929292; height:1px; width:50%">
         <div class="container cont-in" style="margin-top: 50px;">
             <div class="row">
