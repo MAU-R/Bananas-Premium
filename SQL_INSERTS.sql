@@ -13,4 +13,15 @@ insert into usuario(nombre,contraseña,rol)values
 ("banan-worker-2","6789","worker"),
 ("banana-manager","9876","admin")
 ;
-select * from usuario;
+select * from detalle_sucursal;
+
+insert into detalle_sucursal(id_usuario, id_sucursal)values
+(6,1),
+(7,1),
+(8,1);
+insert into compra(monto_total)values(20.25),(9.99);
+insert into detalle_compra(id_sucursal,id_compra,id_helado,cantidad)values
+(1,1,4,2),
+(1,1,5,2),
+(1,2,6,1),
+(1,2,5,1);
