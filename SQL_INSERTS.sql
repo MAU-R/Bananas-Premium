@@ -14,7 +14,9 @@ insert into usuario(nombre,contraseña,rol)values
 ("banana-manager","9876","admin")
 ;
 select * from detalle_sucursal;
-
+insert into sucursal(nombre, ubicacion,imagen)values
+("Vancouber shop","vancouber","http://3.bp.blogspot.com/-hCK4AEopfNM/U3ofb5Hk6NI/AAAAAAAAkJ4/YLEWfcFP_o0/s1600/01+The+Ice+Cream+Shop+@+Simpang+Bedok+[Singapore]+(Large).JPG"),
+("Dallas Center","Dallas", "https://d2j8c2rj2f9b78.cloudfront.net/uploads/10-charlotte-ice-cream-shops/content/Jenis-Ice-Cream-4.JPG");
 insert into detalle_sucursal(id_usuario, id_sucursal)values
 (6,1),
 (7,1),
