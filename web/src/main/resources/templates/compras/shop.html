@@ -14,42 +14,14 @@
             <hr>
             <hr>
             <ul class="tilesWrap">
-                <li>
-                    <img class="pic" th:src="@{/img/ic.png}" alt="alt"/>
-                    <h2>Strawberry</h2>
-                    <h3><i>$4.99</i></h3>
-                    <p>
-                        Some random text that will
+                <li th:each="helado : ${helados}">
+                    <img class="pic" th:src="${helado.imagen}" alt="alt"/>
+                    <h2 th:text="${helado.sabor}"></h2>
+                    <h3><i th:text="${helado.precio}"></i></h3>
+                    <p th:text="${helado.nombre}">
+                        
                     </p>
-                    <button>Add To Cart</button>
-                </li>
-                <li>
-                    <img class="pic" th:src="@{/img/ic.png}" style="filter: sepia(100%);" alt="alt"/>
-                    <h2>Vanilla</h2>
-                    <h3><i>$4.99</i></h3>
-                    <p>
-                        Make you crave each flavor
-                    </p>
-                    <button>Add To Cart</button>
-                </li>
-                <li>
-                    <img class="pic" th:src="@{/img/ic.png}" style="filter: invert();" alt="alt"/>
-                    <h2>Mint?</h2>
-                    <h3><i>$4.99</i></h3>
-                    <p>
-                        That you see here until
-                    </p>
-                    <button>Add To Cart</button>
-                </li>
-                <li>
-                    <img class="pic" th:src="@{/img/ic.png}" style="filter: grayscale();" alt="alt"/>
-                    <h2>Oreo</h2>
-                    <h3><i>$4.99</i></h3>
-                    <p>
-                        You check your bank account
-                    </p>
-                    <button>Add To Cart</button>
-                </li>
+                    <button ><a th:href="@{'/inicio/shop/add/'+${helado.id}}">add to cart</a></button>
             </ul>
             <a  th:href="@{/inicio/home/}" ><button type="submit" class="btn-primary btn-large btn-rtrn">Return Home</button></a>
             <a  th:href="@{/inicio/cart/}" ><button type="submit" class="btn-primary btn-large btn-chck">Cart</button></a>

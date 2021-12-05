@@ -9,9 +9,12 @@ import java.util.List;
 import org.springframework.jdbc.core.RowMapper;
 
 import bananas.premium.web.Data.db.Conexion;
+import bananas.premium.web.Data.repository.CompraRepository;
 import bananas.premium.web.modelos.Compra;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-public class CompraDAO extends Conexion{
+public class CompraDAO extends Conexion implements CompraRepository{
 
     class mapCompra implements RowMapper<Compra>{
         @Override

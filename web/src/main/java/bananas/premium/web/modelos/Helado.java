@@ -64,4 +64,10 @@ public class Helado {
     public String getNombre(){
         return nombre;
     }
+    public Helado(String sabor, String imagen, String nombre, double precio){
+        this.nombre=nombre;
+        this.imagen=imagen;
+        this.sabor=sabor;
+        this.precio=precio;
+    }
 }
